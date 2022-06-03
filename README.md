@@ -34,5 +34,7 @@ Then the top 10 in that genre will show up as well as some related videos
 
 ## API’s to be Used:
 * Boardgamegeek
-* Youtube
+* Youtube!
 * Reddit
+
+[Hop ON Board - Copy](https://user-images.githubusercontent.com/82787571/171785105-3c481172-27a2-4348-9a1a-48728e7af46f.png)
