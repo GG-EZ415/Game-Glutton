@@ -1,14 +1,14 @@
 # Hop-ON-Board
-*Type of user
-    *Board gamers of all levels and game reviewers
-*Some goals
-    *Find ratings and reviews of boardgames
-    *Find youtube tutorials and how too
-    *Reddit answers
-*Benefits
-    *Helps people decide if they want to play a game
-    *Helps people start a game with youtube videos
-    *Helps people figure out issues while playing the game 
+-Type of user
+    -Board gamers of all levels and game reviewers
+-Some goals
+    -Find ratings and reviews of boardgames
+    -Find youtube tutorials and how too
+    -Reddit answers
+-Benefits
+    -Helps people decide if they want to play a game
+    -Helps people start a game with youtube videos
+    -Helps people figure out issues while playing the game 
 Project Description
 
 We are creating a page that can search the boardgamegeek website via their api to find rankings and other information about a game.
