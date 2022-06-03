@@ -37,6 +37,10 @@ Then the top 10 in that genre will show up as well as some related videos
 * Youtube!
 * Reddit
 
+## Frameworks Used:
+* Bulma
+* Tailwind
+
 
 
 ![Hop ON Board](https://user-images.githubusercontent.com/82787571/171785363-f748843f-547d-493e-931f-1db52b309856.png)
