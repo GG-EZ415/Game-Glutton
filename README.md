@@ -1,7 +1,7 @@
 # Game Glutton
 
 ### Type of user:
-* Board gamers of all levels and game reviewers
+* Gamers of all levels and game reviewers
 ### Some goals:
 * Find ratings and reviews of boardgames
 * Find youtube tutorials and how too
