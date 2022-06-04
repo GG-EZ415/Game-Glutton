@@ -33,7 +33,7 @@ When they do not know of a specific game they can search by genre
 Then the top 10 in that genre will show up as well as some related videos
 
 ## API’s to be Used:
-* Boardgamegeek
+* RAWG (https://rawg.io/apidocs)
 * Youtube!
 * Reddit
 
