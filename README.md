@@ -1,4 +1,4 @@
-# Hop-ON-Board
+# Game Glutton
 
 ### Type of user:
 * Board gamers of all levels and game reviewers
