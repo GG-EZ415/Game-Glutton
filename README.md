@@ -3,9 +3,10 @@
 ### Type of user:
 * Gamers of all levels and game reviewers
 ### Some goals:
-* Find ratings and reviews of boardgames
+* Find ratings and reviews of games
 * Find youtube tutorials and how too
 * Reddit answers
+* Use RAWG to get ratings and reviews
 ### Benefits:
 * Helps people decide if they want to play a game
 * Helps people start a game with youtube videos
@@ -20,8 +21,8 @@ Possible subreddit thread if searching for a specific pain point with a game
 
 ## User Story:
 
-As someone interested in board games
-I want to find out about a board game
+As someone interested in games
+I want to find out about a game
 So that I can determine if I want to purchase it and/or play it
 Acceptance Criteria
 Given a board game search dashboard
@@ -42,5 +43,6 @@ Then the top 10 in that genre will show up as well as some related videos
 * Tailwind
 
 
+![Game Glutton](https://user-images.githubusercontent.com/82787571/172019455-886035e9-a2c0-48f9-ac1e-2efd0c2874c9.png)
 
-![Hop ON Board](https://user-images.githubusercontent.com/82787571/171785363-f748843f-547d-493e-931f-1db52b309856.png)
+
