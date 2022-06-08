@@ -3,10 +3,21 @@ body {
   background-size: cover;
 }
 
+.navbar-item {
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
 html {
   background-color: unset;
 }
 
 .navbar {
   background-color: unset;
+}
+.container {
+  margin-top: 250px;
 }
