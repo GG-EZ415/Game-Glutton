@@ -1,6 +1,20 @@
-* {
-  background-image: url(https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/5/5d/Varolz.jpg/revision/latest?cb=20201222171646);
+body {
+  background-image: url(../imgs/Background_img_Varolz.png);
+  background-size: cover;
 }
-@media screen {
-    
+
+.navbar-item {
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
+html {
+  background-color: unset;
+}
+
+.navbar {
+  background-color: unset;
 }
