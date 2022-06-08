@@ -1,15 +1,15 @@
 // jp-will create and append the information from the api and place it in their 2 containers
 let youtube = {
-    "apiKey": 
+    "apiKey": null
 
-}
+};
 
 // jp-will create and append the information from the api and place it in their 2 containers
 
 // jp-will create and append the information from the api and place it in their 2 containersgit p
 
 var rawgAPI = '4195cc8002804467be513fd2af860f7e';
-var youTubeAPI =
+var youTubeAPI = null;
 // rawg link - https://api.rawg.io/api/games?key=YOUR_API_KEY&dates=2019-09-01,2019-09-30&platforms=18,1,7
 // rawg link - https://api.rawg.io/api/games?key=4195cc8002804467be513fd2af860f7e&dates=2019-09-01,2019-09-30&platforms=18,1,7
 // onclick function to intiate the data pull from rawg and youtube
@@ -18,7 +18,7 @@ var youTubeAPI =
 
 // get game game name on click
 var searchBarEl;
-$("button")on.('click', function () {
+$("button").on('click', function () {
     console.log('button');
     searchBarEl = $(this).siblings().val();
     console.log(searchBarEl);
