@@ -2,9 +2,11 @@ body {
   background-image: url(../imgs/Background_img_Varolz.png);
   background-size: cover;
 }
+
 html {
   background-color: unset;
 }
+
 .navbar {
   background-color: unset;
 }
