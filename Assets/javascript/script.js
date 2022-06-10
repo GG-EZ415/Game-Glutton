@@ -29,13 +29,23 @@ document.getElementById('search-button').addEventListener('click', function () {
 
 
 // leon-you count potentially gull you top games and screenshots from here
+var $newdiv1 = $("<div id='object1'></div>"),
+    newdiv2 = document.createElement("div"),
+    existingdiv1 = document.getElementById("footer");
+
 function rawgPull() {
     // will fetch ALL the games
     fetch('https://api.rawg.io/api/games?key=' + rawgAPI + '&dates=2019-09-01,2019-09-30&platforms=18,1,7')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+            console.log(data.results[0].name);
+            console.log(data.results[0].esrb_rating.name);
+            console.log(data.results[0].metacritic);
+            console.log(data.results[0].background_image);
+            // console.log(data.results[0].stores);
         })
+    $(".test").append($newdiv1, [newdiv2, existingdiv1]);
 
 };
 
