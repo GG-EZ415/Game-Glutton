@@ -20,7 +20,6 @@ $("button").on('click', function () {
     console.log(searchVal);
     rawgPull(searchVal);
     youTubePull(searchVal);
-
 });
 
 
@@ -56,12 +55,46 @@ function youTubePull(gameName) {
         console.log(data);
         console.log(data.items[0].snippet.title);
         console.log(data.items[0].snippet.thumbnails.default.url);
-
+        for ( var i = 0; i < 3; i++){
+            const title = data.items[i].snippet.title;
+            const thumbnails = data.items[i].snippet.thumbnails.default.url;
+            $(title).createElement
+        }
     })
-
-};
-
-function rawgCont() {
+$('.test').append(youtubeDataCont);
 
 
 };
+
+
+var youtubeDataCont = '<div class="column is-3-tablet is-5-desktop">' +
+    '<div class="card">' +
+    '<div class="card-image.has-text-centred.px-5">' +
+    '<img src="assets/imgs/Switch_Sports.jpg" alt="wii">' +
+    '</div>' +
+    '<div class="card-content">' +
+    '<p class="title is-size-5">Top 2</p>' +
+    '<p>$xx.xx</p>' +
+    '</div>' +
+    '<footer class="card-footer">' +
+    '<p class="card-footer-item">' +
+    '<a href="" class="has-text-grey">Review</a>' +
+    '</p>' +
+    '<p class="card-footer-item">' +
+    '<a href="" class="has-text-grey">Purchase</a>' +
+    '</p>' +
+    '</footer>' +
+    '</div>' +
+    '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
