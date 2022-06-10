@@ -23,7 +23,26 @@ $("button").on('click', function () {
 
 });
 
-
+var rawgDataCont = '<div class="column is-3-tablet is-5-desktop">' +
+    '<div class="card">' +
+    '<div class="card-image.has-text-centred.px-5">' +
+    '<img src="assets/imgs/Switch_Sports.jpg" alt="wii">' +
+    '</div>' +
+    '<div class="card-content">' +
+    '<p class="title is-size-5">Top 2</p>' +
+    '<p>$xx.xx</p>' +
+    '</div>' +
+    '<footer class="card-footer">' +
+    '<p class="card-footer-item">' +
+    '<a href="" class="has-text-grey">Review</a>' +
+    '</p>' +
+    '<p class="card-footer-item">' +
+    '<a href="" class="has-text-grey">Purchase</a>' +
+    '</p>' +
+    '</footer>' +
+    '</div>' +
+    '</div>';
+var testEl = document.querySelector('.test')
 
 // leon-you count potentially gull you top games and screenshots from here
 var $newdiv1 = $("<div id='object1'></div>"),
@@ -41,8 +60,14 @@ function rawgPull(gameName) {
             console.log(data.results[0].metacritic);
             console.log(data.results[0].background_image);
             // console.log(data.results[0].stores);
+            testEl.innerHTML = "";
+            for (var i = 0; i < 1; i++)
+                var title = data.results[i].name;
+            var rating = data.results[i].esrb_rating.name;
+            var rating = data.results[i].metacritic;
+            var rating = data.results[i].background_image;
+            $(".test").append(rawgDataCont);
         })
-    $(".test").append($newdiv1, [newdiv2, existingdiv1]);
 
 };
 
@@ -51,17 +76,13 @@ function rawgPull(gameName) {
 
 function youTubePull(gameName) {
     fetch(youtubeAPI + gameName + youtubeAPIKey)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        console.log(data.items[0].snippet.title);
-        console.log(data.items[0].snippet.thumbnails.default.url);
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.items[0].snippet.title);
+            console.log(data.items[0].snippet.thumbnails.default.url);
 
-    })
-
-};
-
-function rawgCont() {
-
+        })
 
 };
+
