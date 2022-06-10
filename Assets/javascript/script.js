@@ -9,7 +9,7 @@ let youtube = {
 // jp-will create and append the information from the api and place it in their 2 containersgit p
 
 var rawgAPI = '4195cc8002804467be513fd2af860f7e';
-var youTubeAPI = null;
+var youTubeAPI = "AIzaSyCKEJL7QBlhCvJotb_E4HkcyPhBFwFO2WU";
 // rawg link - https://api.rawg.io/api/games?key=YOUR_API_KEY&dates=2019-09-01,2019-09-30&platforms=18,1,7
 // rawg link - https://api.rawg.io/api/games?key=4195cc8002804467be513fd2af860f7e&dates=2019-09-01,2019-09-30&platforms=18,1,7
 // onclick function to intiate the data pull from rawg and youtube
