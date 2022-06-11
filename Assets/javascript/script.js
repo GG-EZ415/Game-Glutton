@@ -1,16 +1,8 @@
-// jp-will create and append the information from the api and place it in their 2 containers
 
-// jp-will create and append the information from the api and place it in their 2 containers
-
-// jp-will create and append the information from the api and place it in their 2 containersgit p
 var rawgAPI = '4195cc8002804467be513fd2af860f7e';
 var youtubeAPI = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=";
 var youtubeAPIKey = "&key=AIzaSyCKEJL7QBlhCvJotb_E4HkcyPhBFwFO2WU";
-// rawg link - https://api.rawg.io/api/games?key=YOUR_API_KEY&dates=2019-09-01,2019-09-30&platforms=18,1,7
-// rawg link - https://api.rawg.io/api/games?key=4195cc8002804467be513fd2af860f7e&dates=2019-09-01,2019-09-30&platforms=18,1,7
-// onclick function to intiate the data pull from rawg and youtube
-// https://api.rawg.io/api/games
-// stores link https://api.rawg.io/api/games/{game_pk}/stores
+
 
 // get game game name on clickbar searchBarEl = "";
 $("button").on('click', function () {
@@ -24,31 +16,31 @@ $("button").on('click', function () {
 
 });
 
-var rawgDataCont = '<div class="column is-3-tablet is-5-desktop">' +
-    '<div class="card">' +
-    '<div class="card-image.has-text-centred.px-5">' +
-    '<img src="assets/imgs/Switch_Sports.jpg" alt="wii">' +
-    '</div>' +
-    '<div class="card-content">' +
-    '<p class="title is-size-5">Top 2</p>' +
-    '<p>$xx.xx</p>' +
-    '</div>' +
-    '<footer class="card-footer">' +
-    '<p class="card-footer-item">' +
-    '<a href="" class="has-text-grey">Review</a>' +
-    '</p>' +
-    '<p class="card-footer-item">' +
-    '<a href="" class="has-text-grey">Purchase</a>' +
-    '</p>' +
-    '</footer>' +
-    '</div>' +
-    '</div>';
+
+function createCard(title, rating, meta, img) {
+    return '<div class="column is-3-tablet is-5-desktop">' +
+        '<div class="card">' +
+        '<div class="card-image.has-text-centred.px-5" id="rawg-image">' +
+        '<img src="' + img + '" alt="wii">' +
+        '</div>' +
+        '<div class="card-content">' +
+        '<p class="title is-size-5">Top 2</p>' +
+        '<h1 id="rawg-game-title">' + title + '</h1>' +
+        '</div>' +
+        '<footer class="card-footer">' +
+        '<p class="card-footer-item">' +
+        '<h3 id="rawg-esrb-rating" class="has-text-grey">' + rating + '</h3>' +
+        '</p>' +
+        '<p class="card-footer-item">' +
+        '<h3 id="rawg-meta" class="has-text-grey">' + meta + '</h3>' +
+        '</p>' +
+        '</footer>' +
+        '</div>' +
+        '</div>';
+}
 var testEl = document.querySelector('.test')
 
-// leon-you count potentially gull you top games and screenshots from here
-var $newdiv1 = $("<div id='object1'></div>"),
-    newdiv2 = document.createElement("div"),
-    existingdiv1 = document.getElementById("footer");
+
 
 function rawgPull(gameName) {
     // will fetch ALL the games
@@ -62,13 +54,18 @@ function rawgPull(gameName) {
             console.log(data.results[0].background_image);
             // console.log(data.results[0].stores);
             testEl.innerHTML = "";
-            for (var i = 0; i < 1; i++)
+            for (var i = 0; i < 1; i++) {
                 var title = data.results[i].name;
-            var rating = data.results[i].esrb_rating.name;
-            var rating = data.results[i].metacritic;
-            var rating = data.results[i].background_image;
-            $(".test").append(rawgDataCont);
+                var rating = data.results[i].esrb_rating.name;
+                var metacritic = data.results[i].metacritic;
+                var rawgPic = data.results[i].background_image;
+
+                $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
+
+            }
+
         })
+
 
 };
 
