@@ -18,9 +18,11 @@ html {
 .navbar {
   background-color: unset;
 }
-.container {
+.input-group {
   margin-top: 250px;
+  height: 70px;
 }
 .bi-search {
   color: white;
+  padding: 50px;
 }

@@ -20,6 +20,7 @@ $("button").on('click', function () {
     console.log(searchVal);
     rawgPull(searchVal);
     youTubePull(searchVal);
+    $('#search-input').val("");
 
 });
 
