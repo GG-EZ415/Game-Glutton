@@ -91,12 +91,11 @@ $(function () {
 $("#modal-yes").on('click', function () {
     console.log('modal');
     $(modalEl).removeClass("is-active")
-
+    localStorage.setItem('modalAnswer', 'yes')
 });
 
 $("#modal-no").on('click', function () {
     console.log('modal');
     $(modalEl).removeClass("is-active")
-
-
+    localStorage.setItem('modalAnswer', 'no')
 });
