@@ -17,6 +17,10 @@ $("#search-button").on('click', function () {
 });
 
 
+$(window).on('load', function () {
+    rawgPush("");
+});
+
 function createCard(title, rating, meta, img) {
     // this return is handing off the rest of the entire string
     return '<div class="column is-3-tablet is-5-desktop">' +
@@ -104,3 +108,47 @@ $("#modal-no").on('click', function () {
     $(modalEl).removeClass("is-active")
     localStorage.setItem('modalAnswer', 'false')
 });
+
+function createCardsOnLoad(title, rating, meta, img) {
+    return '<div class="column is-3-tablet is-2-desktop">' +
+        '<div class="card">' +
+        '<div class="card-image has-text-centred.px-4" id="rawg-image">' +
+        '<img src="' + img + '" alt="'+title+'">' +
+        '</div>' +
+        '<div class="card-content">' +
+        '<p class="is-size-4">' +
+        '<h5 id="rawg-game-title">' + title + '</h5>' +
+        '</p>' +
+        '</div>' +
+        '<footer class="card-footer">' +
+        '<p class="card-footer-item">' +
+        '<h5 id="rawg-esrb-rating" class="has-text-danger-dark ">' + rating + '</h5>' +
+        '</p>' +
+        '<p class="card-footer-item">' +
+        '<h8 id="rawg-meta" class="has-text-warning-dark">' + meta + '</h8>' +
+        '</p>' +
+        '</footer>' +
+        '</div>' +
+        '</div>';
+}
+
+function rawgPush() {
+    fetch('https://api.rawg.io/api/games?key=' + rawgAPI)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.results[0].name);
+            console.log(data.results[0].esrb_rating.name);
+            console.log(data.results[0].metacritic);
+            console.log(data.results[0].background_image); 
+            testEl.innerHTML = "";
+            for (var i = 0; i < 5; i++) {
+                var title = data.results[i].name;
+                var rating = data.results[i].esrb_rating.name;
+                var metacritic = data.results[i].metacritic;
+                var rawgPic = data.results[i].background_image;
+                $("#top-games").append(createCardsOnLoad(title, rating, metacritic, rawgPic));
+            }
+        })
+};
+
