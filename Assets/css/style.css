@@ -1,9 +1,17 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
 body {
   background-image: url(../imgs/Background_img_Varolz.png);
   background-size: cover;
 }
 
-.navbar-item {
+a.navbar-item {
+  color: white;
+}
+
+a.navbar-item:hover{
+  background-color: rgb(231, 68, 68);
   color: white;
 }
 
@@ -17,12 +25,72 @@ html {
 
 .navbar {
   background-color: unset;
+  border: solid;
+  border-radius: 20px;
+  border-color: rgb(163, 161, 161);
 }
-.input-group {
-  margin-top: 250px;
-  height: 70px;
+.search{
+  margin-top: 400px;
+  display: block;
+  width: 100%;
+  align-content: center;
 }
-.bi-search {
+#search-input {
+  border-radius: 70px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 75%;
+  align-content: center;
+}
+#search-button {
+  border-radius: 70px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#footer {
+  background: #fffff000;
   color: white;
-  padding: 50px;
+  text-align: center;
+}
+
+.row-2{
+  width: 100%;
+  padding: 50px 15%;
+  display: flex;
+  align-content: center;
+}
+.row-1, .row-3{
+  width: 100%;
+  align-content: center;
+}
+
+.col-1, .col-2, .col-3, .col-4{
+  flex-grow: 2;
+}
+.footer div h3 {
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.row-3 a, .col-1 a, .col-2 a, .col-3 a, .col-4 a {
+  display: flexbox;
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+}
+/*media queries*/
+@media only screen and (max-width:600px){
+  .row-2{
+  width: 100%;
+  padding: 50px 15%;
+  display: block;
+  align-content: center;
+}
+}
+
+#logoName {
+  color: white;
+  font-size: 30px;
 }
