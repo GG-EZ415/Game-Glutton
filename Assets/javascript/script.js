@@ -21,21 +21,17 @@ $("#search-button").on('click', function () {
 function createCard(title, rating, meta, img) {
     return '<div class="column is-3-tablet is-5-desktop">' +
         '<div class="card">' +
-        '<div class="card-image.has-text-centred.px-5" id="rawg-image">' +
-        '<img src="' + img + '" alt="wii">' +
+        '<div class="card-image" id="rawg-image">' +
+        '<img src="' + img + '" alt="' + title + '">' +
         '</div>' +
         '<div class="card-content">' +
         '<p class="title is-size-5">' +
-        '<h1 id="rawg-game-title">' + title + '</h1>' +
+        '<h1 class="has-text-centered" id="rawg-game-title">' + title + '</h1>' +
         '</p>' +
         '</div>' +
         '<footer class="card-footer">' +
-        '<p class="card-footer-item">' +
-        '<h3 id="rawg-esrb-rating" class="has-text-danger-dark ">' + rating + '</h3>' +
-        '</p>' +
-        '<p class="card-footer-item">' +
-        '<h3 id="rawg-meta" class="has-text-warning-dark">' + meta + '</h3>' +
-        '</p>' +
+        '<p class="card-footer-item has-text-danger-dark title has-text-weight-bold" id="rawg-esrb-rating">' + rating + '</p>' +
+        '<p class="card-footer-item has-text-warning-dark title has-text-weight-bold">' + meta + '</p>' +
         '</footer>' +
         '</div>' +
         '</div>';
