@@ -72,15 +72,19 @@ function rawgPull(gameName) {
 // check query parameters to see top games (possibly game of the year titles)
 
 
-// function youTubePull(gameName) {
-//     fetch(youtubeAPI + gameName + youtubeAPIKey)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             console.log(data.items[0].snippet.title);
-//             console.log(data.items[0].snippet.thumbnails.default.url);
-
-//         })
+function youTubePull(gameName) {
+    fetch(youtubeAPI + gameName + youtubeAPIKey)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.items[0].snippet.title);
+            console.log(data.items[0].snippet.thumbnails.default.url);
+              for (var j = 0; j < 1; j++) {
+                 var title = data.items[j].snippet.title;
+                 var thumbnail = data.items[0].snippet.default.url;
+                 $("#youtube-cont").append(createcard(title,thumbnail));
+} 
+// })
 
 // };
 
