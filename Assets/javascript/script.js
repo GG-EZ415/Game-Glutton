@@ -64,12 +64,21 @@ function rawgPull(gameName) {
                 // perhaps add a photo
             }
             else {
-                // youTubePull(gameName);
+                youTubePull(gameName);
             }
         })
 };
 
 // check query parameters to see top games (possibly game of the year titles)
+function iFrame (video,data){
+    return '<div class="column is-3-tablet is-5-desktop">' +
+    '<div class="card">' + '<iframe width="420" height="315" src="' + video + '" ></iframe>' +'</div>'
+    +  '<div class="card-content">' +
+    '<p class="title is-size-5">' +
+    '<h1 class="has-text-centered" id="youtubeVideo">' + data + '</h1>' +
+    '</p>' +
+    '</div>';
+};
 
 
 function youTubePull(gameName) {
@@ -78,15 +87,15 @@ function youTubePull(gameName) {
         .then(data => {
             console.log(data);
             console.log(data.items[0].snippet.title);
-            console.log(data.items[0].snippet.thumbnails.default.url);
-              for (var j = 0; j < 1; j++) {
-                 var title = data.items[j].snippet.title;
-                 var thumbnail = data.items[0].snippet.default.url;
-                 $("#youtube-cont").append(createcard(title,thumbnail));
-} 
-// })
-
-// };
+            console.log(data.items[0].snippet.thumbnails.url);
+              for (var i = 0; i < 1; i++) {
+                var data = data.items[i].snippet.title;
+                var thumbnail = data.items[i].snippet.thumbnail.default.url;
+                $("youtube-cont").append(iFrame(thumbnail,title));
+                 
+}
+})
+};
 
 // modal
 var modalBackgroundEl = document.querySelector(".modal-background");
