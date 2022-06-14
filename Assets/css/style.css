@@ -23,9 +23,13 @@ body {
 }
 .navbar-item {
   color: white;
+
 }
 .navbar {
   background-color: unset;
+  border: solid;
+  border-color: rgb(196, 196, 196);
+  border-radius: 20px;
 }
 .navbar-burger {
   color: white;
