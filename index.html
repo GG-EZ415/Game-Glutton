@@ -17,6 +17,9 @@
 </head>
 
 <body>
+
+
+    <!---->
     <nav class="navbar">
         <div class="navbar-brand">
             <a class="navbar-item">
@@ -28,27 +31,29 @@
         <div class="navbar-menu" id="links">
             <div class="navbar-end">
                 <a class="navbar-item" href="#top-games">Top Games</a>
-                <a class="navbar-item" href="#rawg">RAWG Review</a>
+                <a class="navbar-item" href="#rawg-cont">RAWG Review</a>
                 <a class="navbar-item" href="#youtube">YouTube</a>
                 <a class="navbar-item" href="#footer">Footer</a>
             </div>
-
-
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="input-group">
-                <input class="form-control border rounded-pill" type="search" value="search" id="search-input">
-                <span class="input-group-append">
-                    <button class="btn btn-outline border rounded-pill ms-n5" type="button" id="search-button">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </span>
+    <section class="search-bar">
+        <div class="container">
+            <div class="row">
+                <div class="input-group">
+                    <input class="form-control border rounded-pill" type="search" placeholder="Search"
+                        id="search-input">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-dark border rounded-pill ms-n5" type="button" id="search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
 <div class="test"></div>
 
@@ -122,10 +127,6 @@
                                 <p class="title is-size-5">Top 4</p>
                                 <p>$xx.xx</p>
                             </div>
-
-
-
-
                             <footer class="card-footer">
                                 <p class="card-footer-item">
                                     <a href="" class="has-text-grey">Review</a>
@@ -159,17 +160,173 @@
         </div>
     </section>
 
-    <div class="test"></div>
-    <!-- <section class="section" id="game-search-sect">
-        <div class="container">
-            <h1 class="title has-text-centered is-size-4"> What are we going to play?</h1>
-            <div class="columns is-4 is-variable">
-                <div class="columns is-10-tablet is-5-desktop"></div>
+    <div class="test" id="rawg-cont"></div>
+    <!-- modal -->
+    <div id="modal-box" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5 box">
+            <h3 class="title-modal mb-6">Can you view mature content?</h3>
+            <div class="buttons">
+                <button class="button is-primary is-large" id="modal-yes">Yes!</button>
+                <button class="button is-danger is-large" id="modal-no">No!</button>
             </div>
         </div>
 
-    </section> -->
-    <div id="footer"></div>
+    </div>
+
+
+    <div class="container my-5">
+        <!-- Footer -->
+        <footer id="footer" class="text-center text-lg-start text-white" style="background-color: #ffffff00">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="me-5">
+                            <span>Get connected with us:</span>
+                        </div>
+                        <hr class="mb-4" />
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">James Plasencia</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> jamesplasencia@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> 636-555-3226</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Kilisi</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> xxx@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> xxx</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Leon</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> xxx@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> xxx</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Jennyfer Constanza</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> jennyferislas@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> (626) 556-5577</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1"
+                                        href="https://www.linkedin.com/in/jennyfer-constanza-6684a6235/" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1"
+                                        href="https://github.com/jennyferconstanza" target="blank" role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="mb-4" />
+
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <section class="mb-4 text-center">
+                    <h5 class="text-uppercase">Products Used</h5>
+                    <a class="text-white" href="https://bulma.io/" target="blank">Bulma</a>
+                    <a class="text-white" href="https://getbootstrap.com/" target="blank">Bootstrap</a>
+                    <a class="text-white" href="https://rawg.io/apidocs" target="blank">RAWG API</a>
+                    <a class="text-white"
+                        href="https://console.cloud.google.com/projectselector2/apis/api/youtube.googleapis.com/overview?pli=1&supportedpurview=project"
+                        target="blank">YouTube API</a>
+                </section>
+
+
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: #ffffff00">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/" target="blank">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+
+
+
+
+
+
+
+
 
 
 </body>
