@@ -1,7 +1,6 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
-
 body {
   background-image: url(../imgs/Background_img_Varolz.png);
   background-size: cover;
@@ -36,7 +35,6 @@ html {
   width: 100%;
   align-content: center;
 }
-
 #search-input {
   border-radius: 70px;
   margin: 0 auto;
@@ -44,7 +42,6 @@ html {
   width: 75%;
   align-content: center;
 }
-
 #search-button {
   border-radius: 70px;
   margin: 0 auto;
@@ -70,7 +67,6 @@ html {
 .col-1, .col-2, .col-3, .col-4{
   flex-grow: 2;
 }
-
 .footer div h3 {
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
@@ -78,14 +74,12 @@ html {
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
-
 .row-3 a, .col-1 a, .col-2 a, .col-3 a, .col-4 a {
   display: flexbox;
   text-decoration: none;
   color: white;
   padding: 3px;
 }
-
 /*media queries*/
 @media only screen and (max-width:600px){
   .row-2{
