@@ -12,13 +12,13 @@ $("#search-button").on('click', function () {
     var searchVal = searchBarEl.split(" ").join("%20");
     console.log(searchVal);
     rawgPull(searchVal);
-    // youTubePull(searchVal);
     $('#search-input').val("");
-
+    // moved youtube pull to rawg to account for mature game content
 });
 
 
 function createCard(title, rating, meta, img) {
+    // this return is handing off the rest of the entire string
     return '<div class="column is-3-tablet is-5-desktop">' +
         '<div class="card">' +
         '<div class="card-image" id="rawg-image">' +
@@ -39,7 +39,7 @@ function createCard(title, rating, meta, img) {
 var testEl = document.querySelector('.test')
 
 
-
+// if else condtional for games not found
 function rawgPull(gameName) {
     fetch('https://api.rawg.io/api/games?key=' + rawgAPI + '&search=' + gameName)
         .then(response => response.json())
@@ -50,6 +50,7 @@ function rawgPull(gameName) {
             console.log(data.results[0].metacritic);
             console.log(data.results[0].background_image);
             testEl.innerHTML = "";
+            // doesn't need for loop
             for (var i = 0; i < 1; i++) {
                 var title = data.results[i].name;
                 var rating = data.results[i].esrb_rating.name;
@@ -57,10 +58,19 @@ function rawgPull(gameName) {
                 var rawgPic = data.results[i].background_image;
                 $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
             }
+            //coditional to determine wiether or not youtube api is called no if mature
+            if (rating === "Mature" && localStorage.getItem('modalAnswer') === 'false') {
+                console.log('you cant see that');
+                // perhaps add a photo
+            }
+            else {
+                // youTubePull(gameName);
+            }
+
         })
 };
 
-
+// check query parameters to see top games (possibly game of the year titles)
 
 
 // function youTubePull(gameName) {
@@ -83,15 +93,15 @@ $(function () {
     console.log("ready!");
     $(modalEl).addClass("is-active")
 });
-
+// true & false easier and better practice
 $("#modal-yes").on('click', function () {
     console.log('modal');
     $(modalEl).removeClass("is-active")
-    localStorage.setItem('modalAnswer', 'yes')
+    localStorage.setItem('modalAnswer', 'true')
 });
 
 $("#modal-no").on('click', function () {
     console.log('modal');
     $(modalEl).removeClass("is-active")
-    localStorage.setItem('modalAnswer', 'no')
+    localStorage.setItem('modalAnswer', 'false')
 });
