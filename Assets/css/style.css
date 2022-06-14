@@ -1,31 +1,41 @@
+/*universal selectors*/
 * {
   font-family: 'Poppins', sans-serif;
 }
 body {
   background-image: url(../imgs/Background_img_Varolz.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* position: absolute; */
+  /* top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%; */
 }
-
+/* html {
+  background-color: unset;
+} */
+/*navbar styling*/
 .navbar-item {
   color: white;
 }
-
-.title {
-  color: white;
-}
-
-html {
-  background-color: unset;
-}
-
 .navbar {
   background-color: unset;
 }
+.navbar-burger {
+  color: white;
+}
+/*end of navbar styling*/
+/*search bar styling*/
 .search{
   margin-top: 400px;
   display: block;
   width: 100%;
   align-content: center;
+}
+#search-container {
+  background-color: unset;
 }
 #search-input {
   border-radius: 70px;
@@ -38,7 +48,27 @@ html {
   border-radius: 70px;
   margin: 0 auto;
   padding: 20px;
+  background-color:white;
 }
+/*end of search bar styling*/
+/*top 5 games of the month cards styling*/
+.is-variable {
+  align-content: block;
+}
+.is-size-4{
+  color: white;
+}
+.is-size-5 {
+  color: black;
+}
+/*end of top 5 games of the month cards styling*/
+
+/* banner */
+/* .test{
+  position: relative;
+  z-index: 1000;
+} */
+/*footer styling*/
 #footer {
   background: #fffff000;
   color: white;
@@ -65,6 +95,7 @@ html {
   font-weight: 500;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  color: white;
 }
 .row-3 a, .col-1 a, .col-2 a, .col-3 a, .col-4 a {
   display: flexbox;
@@ -72,8 +103,27 @@ html {
   color: white;
   padding: 3px;
 }
-/*media queries*/
-@media only screen and (max-width:600px){
+/*end of footer styling*/
+/*media queries styling*/
+@media only screen 
+  and (max-width:600px){
+  .navbar-item {
+    color: black;
+  }
+  .row-2{
+  width: 100%;
+  padding: 50px 15%;
+  display: block;
+  align-content: center;
+}
+}
+/*ipad mini devices*/
+@media only screen 
+  and (min-device-width: 601px) 
+  and (max-device-width: 1024px) {
+ .navbar-item {
+  color: black;
+  }
   .row-2{
   width: 100%;
   padding: 50px 15%;

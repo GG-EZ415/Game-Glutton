@@ -1,3 +1,12 @@
+//navbar function
+$(document).ready(function () {
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function () {
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
+  });
+});
 // JP-commented out YouTube stuff because I used up all out YouTube api fetches
 
 var rawgAPI = '4195cc8002804467be513fd2af860f7e';
