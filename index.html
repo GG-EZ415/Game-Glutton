@@ -12,7 +12,9 @@
 </head>
 
 <body>
-<!--navbar-->
+
+
+    <!---->
     <nav class="navbar">
         <div class="navbar-brand">
             <a class="navbar-item">
@@ -26,32 +28,34 @@
                 <a class="navbar-item" href="#top-games">Top Games</a>
                 <a class="navbar-item" href="#rawg-cont">RAWG Review</a>
                 <a class="navbar-item" href="#youtube">YouTube</a>
-                <a class="navbar-item" href="#footer">Footer</a>
+                <a class="navbar-item" href="#footer">Contact Us</a>
             </div>
         </div>
     </nav>
-<!--end of navbar-->
-	<!--Website Logo  -->
-    <div class="has-text-centered mt-6">
-    <figure class="image is-136x136 is-inline-block">
-        <img id="webLogo" src="/Assets/imgs/Game_Glutton Logo.png">
-      </figure>
-    </div>
-<!--search bar-->
-    <section class="search">
-        <div class="container" id="search-container">
-            <form action="" class="search-bar">
-                <div class="content has-text-centered">
-                    <input type="text" placeholder="Search" id="search-input">
-                    <button type="button" id="search-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+
+<div class="has-text-centered">
+    <figure  class="is-inline-block m-6">
+        <img src="/Assets/imgs/Game_Glutton Logo.png">
+    </figure>
+</div>
+    <section class="search-bar">
+        <div class="container has-text-centered">
+            <div class="row">
+                <div class="input-group">
+                    <input class="form-control border-rounded-pill" type="search" placeholder="Search"
+                        id="search-input">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-dark border-rounded-pill ms-n5" type="button" id="search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </span>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
-<!--end of search bar-->
-<!--top 5 games of the month cards-->
+
+
+
     <section class="section" id="top-games">
         <div class="container">
             <h2 class="title has-text-centered is-size-4">Top 5 Monthly games</h3>
@@ -154,9 +158,9 @@
                 </div>
         </div>
     </section>
-<!--end of top 5 games of the month cards-->
+
     <div class="test" id="rawg-cont"></div>
-<!-- modal -->
+    <!-- modal -->
     <div id="modal-box" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content has-background-white py-5 px-5 box">
@@ -166,102 +170,162 @@
                 <button class="button is-danger is-large" id="modal-no">No!</button>
             </div>
         </div>
+
     </div>
-<!--end of modal-->
-    <!--footer-->
-    <footer class="footer" id="footer">
-        <div class></div>
-        <div class="row-1">
-            <h3 class="title has-text-centered">Get connected with us:</h3>
-        </div>
-        <div class="row-2">
-             <div class="col-1">
-             <h3>James Plasencia</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i> xxx@gmail.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i> xxx</p>
-                </li>
-                <li>
-                    <a href="#!" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="#!" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-2">
-             <h3>Kilisi Vazquez</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i> KilisiVazquez@yahoo.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i> xxx</p>
-                </li>
-                <li>
-                    <a href="#!" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="#!" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-3">
-            <h3>Leon Poon</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i> xxx@gmail.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i> xxx</p>
-                </li>
-                <li>
-                    <a href="#!" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="#!" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-4">
-             <h3>Jennyfer Constanza</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i> jennyferislas@gmail.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i> (626) 556-5577</p>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/jennyfer-constanza-6684a6235/" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="https://github.com/jennyferconstanza" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        </div>
-        <div class="row-3">
-            <h3>Products Used</h3>
-             <a href="https://bulma.io/" target="_blank">Bulma</a>
-             <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
-             <a href="https://rawg.io/apidocs" target="_blank">RAWG API</a>
-             <a href="https://console.cloud.google.com/projectselector2/apis/api/youtube.googleapis.com/overview?pli=1&supportedpurview=project"
-                        target="_blank">YouTube API</a>
-        </div>
-    </footer>
-<!--end of footer-->
+
+
+    <div class="container my-5">
+        <!-- Footer -->
+        <footer id="footer" class="text-center text-lg-start text-white" style="background-color: #ffffff00">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="me-5">
+                            <span>Get connected with us:</span>
+                        </div>
+                        <hr class="mb-4" />
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">James Plasencia</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> jamesplasencia@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> 636-555-3226</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Kilisi</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> KilisiVazquez@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i>(415)310-45533</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Leon</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> xxx@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> xxx</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1" href="#!" target="blank"
+                                        role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Jennyfer Constanza</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <p><i class="bi bi-envelope-fill"></i> jennyferislas@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p><i class="bi bi-telephone-fill"></i> (626) 556-5577</p>
+                                </li>
+                                <li>
+                                    <a class="btn btn-outline-light btn-floating m-1"
+                                        href="https://www.linkedin.com/in/jennyfer-constanza-6684a6235/" target="blank"
+                                        role="button">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-floating m-1"
+                                        href="https://github.com/jennyferconstanza" target="blank" role="button">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="mb-4" />
+
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <section class="mb-4 text-center">
+                    <h5 class="text-uppercase">Products Used</h5>
+                    <a class="text-white" href="https://bulma.io/" target="blank">Bulma</a>
+                    <a class="text-white" href="https://getbootstrap.com/" target="blank">Bootstrap</a>
+                    <a class="text-white" href="https://rawg.io/apidocs" target="blank">RAWG API</a>
+                    <a class="text-white"
+                        href="https://console.cloud.google.com/projectselector2/apis/api/youtube.googleapis.com/overview?pli=1&supportedpurview=project"
+                        target="blank">YouTube API</a>
+                </section>
+
+
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: #ffffff00">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/" target="blank">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+
+
+
+
+
+
+
+
 
 
 </body>
