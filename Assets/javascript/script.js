@@ -65,49 +65,61 @@ var testEl = document.querySelector(".test");
 
 // if else condtional for games not found
 function rawgPull(gameName) {
-  fetch("https://api.rawg.io/api/games?key=" + rawgAPI + "&search=" + gameName)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      console.log(data.results[0].name);
-      console.log(data.results[0].esrb_rating.name);
-      console.log(data.results[0].metacritic);
-      console.log(data.results[0].background_image);
-      testEl.innerHTML = "";
-      // doesn't need for loop
-      for (var i = 0; i < 1; i++) {
-        var title = data.results[i].name;
-        var rating = data.results[i].esrb_rating.name;
-        var metacritic = data.results[i].metacritic;
-        var rawgPic = data.results[i].background_image;
-        $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
-      }
-      //coditional to determine wiether or not youtube api is called no if mature
-      if (
-        rating === "Mature" &&
-        localStorage.getItem("modalAnswer") === "false"
-      ) {
-        console.log("you cant see that");
-        // perhaps add a photo
-      } else {
-        // youTubePull(gameName);
-      }
-    });
-}
+    fetch('https://api.rawg.io/api/games?key=' + rawgAPI + '&search=' + gameName)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.results[0].name);
+            console.log(data.results[0].esrb_rating.name);
+            console.log(data.results[0].metacritic);
+            console.log(data.results[0].background_image);
+            testEl.innerHTML = "";
+            // doesn't need for loop
+            for (var i = 0; i < 1; i++) {
+                var title = data.results[i].name;
+                var rating = data.results[i].esrb_rating.name;
+                var metacritic = data.results[i].metacritic;
+                var rawgPic = data.results[i].background_image;
+                $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
+            }
+            //coditional to determine wiether or not youtube api is called no if mature
+            if (rating === "Mature" && localStorage.getItem('modalAnswer') === 'false') {
+                console.log('you cant see that');
+                // perhaps add a photo
+            }
+            else {
+                youTubePull(gameName);
+            }
+        })
+};
 
 // check query parameters to see top games (possibly game of the year titles)
+function iFrame (video,data){
+    return '<div class="column is-3-tablet is-5-desktop">' +
+    '<div class="card">' + '<iframe width="420" height="315" src="' + video + '" ></iframe>' +'</div>'
+    +  '<div class="card-content">' +
+    '<p class="title is-size-5">' +
+    '<h1 class="has-text-centered" id="youtubeVideo">' + data + '</h1>' +
+    '</p>' +
+    '</div>';
+};
 
-// function youTubePull(gameName) {
-//     fetch(youtubeAPI + gameName + youtubeAPIKey)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             console.log(data.items[0].snippet.title);
-//             console.log(data.items[0].snippet.thumbnails.default.url);
 
-//         })
-
-// };
+function youTubePull(gameName) {
+    fetch(youtubeAPI + gameName + youtubeAPIKey)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.items[0].snippet.title);
+            console.log(data.items[0].snippet.thumbnails.url);
+              for (var i = 0; i < 1; i++) {
+                var data = data.items[i].snippet.title;
+                var thumbnail = data.items[i].snippet.thumbnail.default.url;
+                $("youtube-cont").append(iFrame(thumbnail,title));
+                 
+}
+})
+};
 
 // modal
 var modalBackgroundEl = document.querySelector(".modal-background");
