@@ -132,25 +132,21 @@ $("#modal-no").on("click", function () {
 
 function createCardsOnLoad(title, rating, meta, img) {
     return '<div class="column is-3-tablet is-2-desktop">' +
-        '<div class="card">' +
-        '<div class="card-image has-text-centred.px-4" id="rawg-image">' +
-        '<img src="' + img + '" alt="'+title+'">' +
-        '</div>' +
-        '<div class="card-content">' +
-        '<p class="is-size-4">' +
-        '<h5 id="rawg-game-title">' + title + '</h5>' +
-        '</p>' +
-        '</div>' +
-        '<footer class="card-footer">' +
-        '<p class="card-footer-item">' +
-        '<h5 id="rawg-esrb-rating" class="has-text-danger-dark ">' + rating + '</h5>' +
-        '</p>' +
-        '<p class="card-footer-item">' +
-        '<h8 id="rawg-meta" class="has-text-warning-dark">' + meta + '</h8>' +
-        '</p>' +
-        '</footer>' +
-        '</div>' +
-        '</div>';
+    '<div class="cards">' +
+    '<div class="card-image" id="rawg-image">' +
+    '<img src="' + img + '" alt="' + title + '">' +
+    '</div>' +
+    '<div class="card-content">' +
+    '<p class="title is-size-2">' +
+    '<h1 class="has-text-centered" id="rawg-game-title">' + title + '</h1>' +
+    '</p>' +
+    '</div>' +
+    '<footer class="card-footer">' +
+    '<h5 class="card-footer-item" id="rawg-esrb-rating">' + rating + '</h5>' +
+    '<h5 class="card-footer-item">' + meta + '</h5>' +
+    '</footer>' +
+    '</div>' +
+    '</div>';
 }
 
 function rawgPush() {
