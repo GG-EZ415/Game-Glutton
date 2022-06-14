@@ -12,17 +12,20 @@ $("#search-button").on('click', function () {
     var searchVal = searchBarEl.split(" ").join("%20");
     console.log(searchVal);
     rawgPull(searchVal);
-<<<<<<< HEAD
     youTubePull(searchVal);
-=======
     $('#search-input').val("");
     // moved youtube pull to rawg to account for mature game content
->>>>>>> d8ece49c32075068040c73907cf78c90c991d235
+    // youTubePull(searchVal);
+    $('#search-input').val("");
+
+
 });
 
 
 function createCard(title, rating, meta, img) {
+
     // this return is handing off the rest of the entire string
+
     return '<div class="column is-3-tablet is-5-desktop">' +
         '<div class="card">' +
         '<div class="card-image" id="rawg-image">' +
@@ -55,6 +58,7 @@ function rawgPull(gameName) {
             console.log(data.results[0].background_image);
             testEl.innerHTML = "";
             // doesn't need for loop
+
             for (var i = 0; i < 1; i++) {
                 var title = data.results[i].name;
                 var rating = data.results[i].esrb_rating.name;
@@ -62,6 +66,7 @@ function rawgPull(gameName) {
                 var rawgPic = data.results[i].background_image;
                 $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
             }
+
             //coditional to determine wiether or not youtube api is called no if mature
             if (rating === "Mature" && localStorage.getItem('modalAnswer') === 'false') {
                 console.log('you cant see that');
@@ -70,7 +75,6 @@ function rawgPull(gameName) {
             else {
                 // youTubePull(gameName);
             }
-
         })
 };
 
@@ -84,8 +88,6 @@ function rawgPull(gameName) {
 //             console.log(data);
 //             console.log(data.items[0].snippet.title);
 //             console.log(data.items[0].snippet.thumbnails.default.url);
-
-<<<<<<< HEAD
 function youTubePull(gameName) {
     fetch(youtubeAPI + gameName + youtubeAPIKey)
     .then(response => response.json())
@@ -101,17 +103,13 @@ function youTubePull(gameName) {
     })
 $('.test').append(youtubeDataCont);
 
-=======
 //         })
 
 // };
->>>>>>> d8ece49c32075068040c73907cf78c90c991d235
 
 // modal
 var modalBackgroundEl = document.querySelector(".modal-background");
 var modalEl = document.querySelector(".modal");
-
-<<<<<<< HEAD
 
 var youtubeDataCont = '<div class="column is-3-tablet is-5-desktop">' +
     '<div class="card">' +
@@ -139,12 +137,32 @@ var youtubeDataCont = '<div class="column is-3-tablet is-5-desktop">' +
 
 
 
+// function youTubePull(gameName) {
+//     fetch(youtubeAPI + gameName + youtubeAPIKey)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             console.log(data.items[0].snippet.title);
+//             console.log(data.items[0].snippet.thumbnails.default.url);
 
+//         })
 
+// };
 
+// modal
+var modalBackgroundEl = document.querySelector(".modal-background");
+var modalEl = document.querySelector(".modal");
 
+$(function () {
+    console.log("ready!");
+    $(modalEl).addClass("is-active")
+});
 
-=======
+$("#modal-yes").on('click', function () {
+    console.log('modal');
+    $(modalEl).removeClass("is-active")
+    localStorage.setItem('modalAnswer', 'yes')
+});
 $(function () {
     console.log("ready!");
     $(modalEl).addClass("is-active")
@@ -161,4 +179,9 @@ $("#modal-no").on('click', function () {
     $(modalEl).removeClass("is-active")
     localStorage.setItem('modalAnswer', 'false')
 });
->>>>>>> d8ece49c32075068040c73907cf78c90c991d235
+
+$("#modal-no").on('click', function () {
+    console.log('modal');
+    $(modalEl).removeClass("is-active");
+    localStorage.setItem('modalAnswer', 'no');
+})};

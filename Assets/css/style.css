@@ -6,7 +6,12 @@ body {
   background-size: cover;
 }
 
-.navbar-item {
+a.navbar-item {
+  color: white;
+}
+
+a.navbar-item:hover{
+  background-color: rgb(231, 68, 68);
   color: white;
 }
 
@@ -20,6 +25,9 @@ html {
 
 .navbar {
   background-color: unset;
+  border: solid;
+  border-radius: 20px;
+  border-color: rgb(163, 161, 161);
 }
 .search{
   margin-top: 400px;
@@ -80,4 +88,9 @@ html {
   display: block;
   align-content: center;
 }
+}
+
+#logoName {
+  color: white;
+  font-size: 30px;
 }
