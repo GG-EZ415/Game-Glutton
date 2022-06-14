@@ -15,8 +15,9 @@ var youtubeAPI =
 var youtubeAPIKey = "&key=AIzaSyCKEJL7QBlhCvJotb_E4HkcyPhBFwFO2WU";
 
 // get game game name on clickbar searchBarEl = "";
-$("#search-button").on("click", function () {
+$("#search-button").on("click", function (e) {
   console.log("button");
+  e.preventDefault();
   searchBarEl = $("#search-input").val().trim();
   var searchVal = searchBarEl.split(" ").join("%20");
   console.log(searchVal);

@@ -34,6 +34,10 @@ body {
 .navbar-burger {
   color: white;
 }
+.navbar-burger:hover {
+    background-color: transparent;
+    color: white;
+}
 a.navbar-item {
   color: white;
 }
@@ -77,6 +81,25 @@ a.navbar-item:hover{
 }
 .is-size-5 {
   color: black;
+}
+cards{
+  height: 100%;
+}
+
+.cards{ 
+  background-color: rgb(220, 220, 162);
+}
+.cards img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.844), 0 6px 30px 0 rgba(2, 2, 2, 0.19);
+  border-radius: 0.5rem;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  margin-top: -3.5%;
+}
+.cards{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
 }
 /*end of top 5 games of the month cards styling*/
 
@@ -133,6 +156,9 @@ a.navbar-item:hover{
   display: block;
   align-content: center;
 }
+cards{
+  height: unset;
+}
 }
 @media screen and (max-width: 1023px) {
   .navbar-menu {
@@ -140,6 +166,10 @@ a.navbar-item:hover{
     box-shadow: 0 8px 16px rgb(10 10 10 / 10%);
     padding: 0.5rem 0;
   }
+  cards{
+  height: unset;
+}
+}
 /*ipad mini devices*/
 @media only screen 
   and (min-device-width: 601px) 
@@ -153,26 +183,7 @@ a.navbar-item:hover{
   display: block;
   align-content: center;
 }
+cards{
+  height: unset;
 }
-}
-.cards{
-  height: 100%;
-}
-
-.cards{ 
-  background-color: rgb(220, 220, 162);
-}
-
-.cards img{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.844), 0 6px 30px 0 rgba(2, 2, 2, 0.19);
-  border-radius: 0.5rem;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-  margin-top: -3.5%;
-}
-
-.cards{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 0.5rem;
 }
