@@ -151,3 +151,24 @@ a.navbar-item:hover{
 }
 }
 }
+.cards{
+  height: 100%;
+}
+
+.cards{ 
+  background-color: rgb(220, 220, 162);
+}
+
+.cards img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.844), 0 6px 30px 0 rgba(2, 2, 2, 0.19);
+  border-radius: 0.5rem;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  margin-top: -3.5%;
+}
+
+.cards{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
+}

@@ -25,6 +25,11 @@ $("#search-button").on("click", function () {
   // moved youtube pull to rawg to account for mature game content
 });
 
+
+$(window).on('load', function () {
+    rawgPush("");
+});
+
 function createCard(title, rating, meta, img) {
   // this return is handing off the rest of the entire string
   return (
@@ -124,3 +129,43 @@ $("#modal-no").on("click", function () {
   $(modalEl).removeClass("is-active");
   localStorage.setItem("modalAnswer", "false");
 });
+
+function createCardsOnLoad(title, rating, meta, img) {
+    return '<div class="column is-3-tablet is-2-desktop">' +
+    '<div class="cards">' +
+    '<div class="card-image" id="rawg-image">' +
+    '<img src="' + img + '" alt="' + title + '">' +
+    '</div>' +
+    '<div class="card-content">' +
+    '<p class="title is-size-2">' +
+    '<h1 class="has-text-centered" id="rawg-game-title">' + title + '</h1>' +
+    '</p>' +
+    '</div>' +
+    '<footer class="card-footer">' +
+    '<h5 class="card-footer-item" id="rawg-esrb-rating">' + rating + '</h5>' +
+    '<h5 class="card-footer-item">' + meta + '</h5>' +
+    '</footer>' +
+    '</div>' +
+    '</div>';
+}
+
+function rawgPush() {
+    fetch('https://api.rawg.io/api/games?key=' + rawgAPI)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.results[0].name);
+            console.log(data.results[0].esrb_rating.name);
+            console.log(data.results[0].metacritic);
+            console.log(data.results[0].background_image); 
+            testEl.innerHTML = "";
+            for (var i = 0; i < 5; i++) {
+                var title = data.results[i].name;
+                var rating = data.results[i].esrb_rating.name;
+                var metacritic = data.results[i].metacritic;
+                var rawgPic = data.results[i].background_image;
+                $("#top-games").append(createCardsOnLoad(title, rating, metacritic, rawgPic));
+            }
+        })
+};
+
