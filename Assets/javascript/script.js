@@ -15,8 +15,9 @@ var youtubeAPI =
 var youtubeAPIKey = "&key=AIzaSyCKEJL7QBlhCvJotb_E4HkcyPhBFwFO2WU";
 
 // get game game name on clickbar searchBarEl = "";
-$("#search-button").on("click", function () {
+$("#search-button").on("click", function (e) {
   console.log("button");
+  e.preventDefault();
   searchBarEl = $("#search-input").val().trim();
   var searchVal = searchBarEl.split(" ").join("%20");
   console.log(searchVal);
@@ -65,49 +66,61 @@ var testEl = document.querySelector(".test");
 
 // if else condtional for games not found
 function rawgPull(gameName) {
-  fetch("https://api.rawg.io/api/games?key=" + rawgAPI + "&search=" + gameName)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      console.log(data.results[0].name);
-      console.log(data.results[0].esrb_rating.name);
-      console.log(data.results[0].metacritic);
-      console.log(data.results[0].background_image);
-      testEl.innerHTML = "";
-      // doesn't need for loop
-      for (var i = 0; i < 1; i++) {
-        var title = data.results[i].name;
-        var rating = data.results[i].esrb_rating.name;
-        var metacritic = data.results[i].metacritic;
-        var rawgPic = data.results[i].background_image;
-        $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
-      }
-      //coditional to determine wiether or not youtube api is called no if mature
-      if (
-        rating === "Mature" &&
-        localStorage.getItem("modalAnswer") === "false"
-      ) {
-        console.log("you cant see that");
-        // perhaps add a photo
-      } else {
-        // youTubePull(gameName);
-      }
-    });
-}
+    fetch('https://api.rawg.io/api/games?key=' + rawgAPI + '&search=' + gameName)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.results[0].name);
+            console.log(data.results[0].esrb_rating.name);
+            console.log(data.results[0].metacritic);
+            console.log(data.results[0].background_image);
+            testEl.innerHTML = "";
+            // doesn't need for loop
+            for (var i = 0; i < 1; i++) {
+                var title = data.results[i].name;
+                var rating = data.results[i].esrb_rating.name;
+                var metacritic = data.results[i].metacritic;
+                var rawgPic = data.results[i].background_image;
+                $("#rawg-cont").append(createCard(title, rating, metacritic, rawgPic));
+            }
+            //coditional to determine wiether or not youtube api is called no if mature
+            if (rating === "Mature" && localStorage.getItem('modalAnswer') === 'false') {
+                console.log('you cant see that');
+                // perhaps add a photo
+            }
+            else {
+                youTubePull(gameName);
+            }
+        })
+};
 
 // check query parameters to see top games (possibly game of the year titles)
+function iFrame (video,title){
+    return '<div class="column is-3-tablet is-5-desktop">' +
+    '<div class="card">' + '<div class="card-image" id="youtubeThumnail">' + '<iframe class="image is-500x325" style="width:500px;height:315px" src="' + video + '" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>' +'</div>'
+    +  '<div class="card-content">' + '<img class="image is-500x315">' + 
+    + '<h1 class="has-text-centered" id="youtubeVideo">' + title + '</h1>' +
+    '</div>';
+};
 
-// function youTubePull(gameName) {
-//     fetch(youtubeAPI + gameName + youtubeAPIKey)
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log(data);
-//             console.log(data.items[0].snippet.title);
-//             console.log(data.items[0].snippet.thumbnails.default.url);
 
-//         })
-
-// };
+function youTubePull(gameName) {
+    fetch(youtubeAPI + gameName + youtubeAPIKey)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.items[0].snippet.title);
+            console.log(data.items[0].snippet.thumbnails.default.url);
+              // for (var i = 0; i < 1; i++) {
+                var title = data.items[0].snippet.title;
+                var thumbnail = data.items[0].snippet.thumbnails.default.url;
+                // var thumbnail = data.items;
+                // console.log(thumbnail);
+                $(".youtube-cont").append(iFrame(thumbnail,title));
+                 
+// }
+})
+};
 
 // modal
 var modalBackgroundEl = document.querySelector(".modal-background");
