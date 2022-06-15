@@ -17,7 +17,6 @@ The page may propose 5 games so that most users can see those
 When searching for a specific game, rating, ranking, and age requirement will appear.
 
 ## User Story:
-
 As someone interested in games
 I want to find out about a game
 So that I can determine if I want to purchase it and/or play it
