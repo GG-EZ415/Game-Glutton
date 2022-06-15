@@ -95,12 +95,12 @@ function rawgPull(gameName) {
 };
 
 // check query parameters to see top games (possibly game of the year titles)
-function iFrame (video,data){
+function iFrame (video,title){
     return '<div class="column is-3-tablet is-5-desktop">' +
     '<div class="card">' + '<iframe width="420" height="315" src="' + video + '" ></iframe>' +'</div>'
     +  '<div class="card-content">' +
     '<p class="title is-size-5">' +
-    '<h1 class="has-text-centered" id="youtubeVideo">' + data + '</h1>' +
+    '<h1 class="has-text-centered" id="youtubeVideo">' + title + '</h1>' +
     '</p>' +
     '</div>';
 };
@@ -112,13 +112,15 @@ function youTubePull(gameName) {
         .then(data => {
             console.log(data);
             console.log(data.items[0].snippet.title);
-            console.log(data.items[0].snippet.thumbnails.url);
-              for (var i = 0; i < 1; i++) {
-                var data = data.items[i].snippet.title;
-                var thumbnail = data.items[i].snippet.thumbnail.default.url;
+            console.log(data.items[0].snippet.thumbnails.default.url);
+              // for (var i = 0; i < 1; i++) {
+                var title = data.items[0].snippet.title;
+                var thumbnail = data.items[0].snippet.thumbnails.default.url;
+                // var thumbnail = data.items;
+                // console.log(thumbnail);
                 $("youtube-cont").append(iFrame(thumbnail,title));
                  
-}
+// }
 })
 };
 
