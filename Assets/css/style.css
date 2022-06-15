@@ -109,6 +109,12 @@ cards{
   z-index: 1000;
 } */
 /*footer styling*/
+
+element.style {
+  height: 500px;
+  width: 315px;
+}
+
 #footer {
   background: #fffff000;
   color: white;
