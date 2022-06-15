@@ -20,7 +20,7 @@ When searching for a specific game, rating, ranking, and age requirement will ap
 As someone interested in games
 I want to find out about a game
 So that I can determine if I want to purchase it and/or play it
-Acceptance Criteria
+## Acceptance Criteria
 Given a board game search dashboard
 When I search for a game (or maybe an issue with a game)
 Then I am presented with information from rawg and youtube 
